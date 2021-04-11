@@ -1,16 +1,16 @@
-package com.example.gibuddy.ui.notifications;
+package com.example.gibuddy.ui.read;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class ReadViewModel extends ViewModel {
 
   private MutableLiveData<String> mText;
 
-  public NotificationsViewModel() {
+  public ReadViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is pair fragment");
+    mText.setValue("This is read fragment");
   }
 
   public LiveData<String> getText() {

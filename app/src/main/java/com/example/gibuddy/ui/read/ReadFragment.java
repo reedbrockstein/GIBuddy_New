@@ -1,4 +1,4 @@
-package com.example.gibuddy.ui.notifications;
+package com.example.gibuddy.ui.read;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.gibuddy.R;
 
-public class NotificationsFragment extends Fragment {
+public class ReadFragment extends Fragment {
 
-  private NotificationsViewModel notificationsViewModel;
+  private ReadViewModel homeViewModel;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
                            ViewGroup container, Bundle savedInstanceState) {
-    notificationsViewModel =
-            new ViewModelProvider(this).get(NotificationsViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_pair, container, false);
-    final TextView textView = root.findViewById(R.id.text_pair);
-    notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    homeViewModel =
+            new ViewModelProvider(this).get(ReadViewModel.class);
+    View root = inflater.inflate(R.layout.fragment_read, container, false);
+    final TextView textView = root.findViewById(R.id.text_read);
+    homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);
